@@ -8,10 +8,10 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/api/people', db.getAllPuppies);
-// router.get('/api/people/:id', db.getSinglePuppy);
-// router.post('/api/people', db.createPuppy);
-// router.put('/api/people/:id', db.updatePuppy);
-// router.delete('/api/people/:id', db.removePuppy);
+router.get('/api/people', db.getAllPeople);
+router.get('/api/people/:id', db.getSinglePerson);
+router.post('/api/people', db.createUser);
+router.put('/api/people/:id', db.updateUser);
+router.delete('/api/people/:id', db.removePerson);
 
 module.exports = router;
